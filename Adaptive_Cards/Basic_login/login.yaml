@@ -1,0 +1,54 @@
+{
+  type: "AdaptiveCard",
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  version: "1.5",
+  body: [
+    {
+      type: "TextBlock",
+      text: "Welcome to User login authentication page",
+      wrap: true,
+      '$data': "Welcome To yashas Dewans page",
+      spacing: "large",
+      style: "columnHeader",
+      fontType: "Default",
+      size: "medium",
+      weight: "bolder",
+      color: "default",
+      isSubtle: false
+    },
+    {
+      type: "TextBlock",
+      text: "Please enter your login details",
+      wrap: true,
+      color: "Default",
+      style: "columnHeader",
+      fontType: "Default",
+      size: "Medium"
+    },
+    {
+      type: "Input.Text",
+      placeholder: "Please enter your username here",
+      id: "username",
+      label: "username",
+      isRequired: true,
+      errorMessage: "Username is required"
+    },
+    {
+      type: "Input.Text",
+      placeholder: "Please enter your password here",
+      id: "password",
+      label: "password",
+      isRequired: true,
+      errorMessage: "Password is required"
+    }
+  ],
+  actions: [
+    {
+      type: "Action.Submit",
+      title: "Login",
+      data: {
+        id: "LoginVal"
+      }
+    }
+  ]
+}
