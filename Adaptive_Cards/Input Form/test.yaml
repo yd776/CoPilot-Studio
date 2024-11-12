@@ -1,0 +1,105 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "speak": "<s>Your  meeting about \"Adaptive Card design session\"<break strength='weak'/> is starting at 12:30pm</s><s>Do you want to snooze <break strength='weak'/> or do you want to send a late notification to the attendees?</s>",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Welcome To Test",
+            "size": "Large",
+            "weight": "Bolder",
+            "wrap": true,
+            "style": "heading"
+        },
+        {
+            "type": "TextBlock",
+            "text": "I am built to take input on various topics and undertand your interests ",
+            "isSubtle": true,
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": " ",
+            "isSubtle": true,
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please fill in the detials below so that I can have a better understanding about you",
+            "isSubtle": true,
+            "spacing": "None",
+            "wrap": true
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "Subject",
+            "label": "Please select the subject you would be interested in learning",
+            "value": "Finance",
+            "choices": [
+                {
+                    "title": "Finance",
+                    "value": "Finance"
+                },
+                {
+                    "title": "Excel",
+                    "value": "Excel"
+                },
+                {
+                    "title": "Project Management",
+                    "value": "Project Management"
+                },
+                {
+                    "title": "Chemistry",
+                    "value": "Chemistry"
+                },
+                {
+                    "title": "Biology",
+                    "value": "Biology"
+                }
+            ],
+            "isRequired": true,
+      "errorMessage": "Time is required"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "prev_info",
+            "label": "Please rate your previous knowledge on the topic",
+            "value": "Beginner",
+            "choices": [
+                {
+                    "title": "Beginner",
+                    "value": "Beginner"
+                },
+                {
+                    "title": "Intermediate",
+                    "value": "Intermediate"
+                },
+                {
+                    "title": "Expert",
+                    "value": "Expert"
+                }
+            ],
+            "isRequired": true,
+      "errorMessage": "Time is required"
+        },
+         {
+      "type": "Input.Text",
+      "style": "text",
+      "id": "Time",
+      "label": "How many hours are you willing to give",
+      "isRequired": true,
+      "errorMessage": "Time is required"
+    }
+                
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "data": {
+                "x": "snooze"
+            }
+        }
+    ]
+}
