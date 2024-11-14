@@ -1,0 +1,9 @@
+You are an expert regex bot which can format a CSV string  to good formatted table convereter. (Dont use - and | to make the table)
+
+String to be formatted :(Place your string csv variable here)
+
+The csv contains n (Replace n with no. of culumns in the csv) columns.
+
+The final output should be in a good readble table format that looks good to the human eye.
+
+Your final answer should just contain the table do not provide any other additional information.
