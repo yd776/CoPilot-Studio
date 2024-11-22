@@ -1,0 +1,76 @@
+{
+  type: "AdaptiveCard",
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  version: "1.4",
+  body: [
+    {
+      type: "ColumnSet",
+      style: "default",
+      spacing: "Small",
+      columns: [
+        {
+          type: "Column",
+          width: "stretch",
+          items: [
+            {
+              type: "TextBlock",
+              text: "Here is what I found",
+              wrap: true,
+              spacing: "Small",
+              color: "Default",
+              size: "Large",
+              style: "heading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      type: "Container",
+      items: [
+        {
+          type: "TextBlock",
+          // Generated answer text
+          text: Global.Var3.Text.Content,
+          wrap: true
+        }
+      ]
+    },
+    {
+      type: "Container",
+      items: ForAll(Distinct(Global.Var3.Text.CitationSources, Url),
+        {
+          type: "TextBlock",
+          text: "[Source Document](" & Value & ")",
+          wrap: true,
+          size: "Small",
+          weight: "Lighter"
+        }
+      )
+            
+      
+      
+    },
+    
+      {
+              type: "Column",
+              width: "150",
+      items: ForAll(Distinct(Global.Var3.Text.CitationSources, Name),
+        {
+          type: "TextBlock",
+          text: Value,
+          wrap: true,
+          size: "Small",
+          padding: 10,
+          weight: "Lighter"
+        }
+      )
+      },
+    {
+      type: "TextBlock",
+      text: "",
+      wrap: true
+    }
+
+  ]
+}
